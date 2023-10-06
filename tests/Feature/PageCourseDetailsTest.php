@@ -1,6 +1,8 @@
 <?php
 
+use App\Models\Course;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use function Pest\Laravel\get;
 
 uses(RefreshDatabase::class);
 
@@ -23,9 +25,10 @@ it('shows course details', function () {
             $course->title,
             $course->description,
             'Course tagline',
-            'image.png'
-
-        ])
+            'Learn Laravel routes',
+            'Learn Laravel views',
+            'Learn Laravel commands',
+        ])->assertSee('image.png');
 });
 
 it('show course video count', function () {
