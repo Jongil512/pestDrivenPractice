@@ -1,7 +1,7 @@
 # Todos
 ## Guest can
-- see course overview (page)
-- see course details (page)
+- see course overview (page) ✅
+- see course details (page) ✅
 - purchase a course
 
 ## Member can
