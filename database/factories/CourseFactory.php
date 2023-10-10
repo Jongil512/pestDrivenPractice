@@ -2,11 +2,12 @@
 
 namespace Database\Factories;
 
+use App\Models\Course;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Carbon;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Course>
+ * @extends Factory<Course>
  */
 class CourseFactory extends Factory
 {
@@ -18,9 +19,12 @@ class CourseFactory extends Factory
     public function definition(): array
     {
         return [
-            'slug' => $this->faker->slug,
-            'title' => $this->faker->sentence(3),
-            'description' => $this->faker->paragraph(3),
+            'slug' => $this->faker->slug(),
+            'tagline' => $this->faker->sentence(),
+            'title' => $this->faker->sentence(),
+            'description' => $this->faker->paragraph(),
+            'image' => 'image.png',
+            'learnings' => ['Learn A', 'Learn B', 'Learn C'],
         ];
     }
 
