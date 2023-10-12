@@ -2,10 +2,8 @@
 
 use App\Models\Course;
 use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use function Pest\Laravel\get;
 
-uses(RefreshDatabase::class);
 
 it('asd', function () {
     # Act & Assert
@@ -23,11 +21,13 @@ it('gives back successful response for course details page', function () {
 });
 
 it('gives back successful response for dashboard page', function () {
-    # Arrange
-    $user = User::factory()->create();
-
     # Act & Assert
-    $this->actingAs($user);
-    get(route('dashboard'))
+    loginAsUser();
+    get(route('pages.dashboard'))
         ->assertOk();
+});
+
+it('does not find JetStream registration page', function () {
+    # Act & Assert
+    get('register')->assertNotFound();
 });
