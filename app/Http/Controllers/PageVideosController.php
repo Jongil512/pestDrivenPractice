@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 use App\Models\Video;
-use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
 class PageVideosController extends Controller
