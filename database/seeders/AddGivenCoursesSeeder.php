@@ -19,6 +19,7 @@ class AddGivenCoursesSeeder extends Seeder
         }
 
         Course::create([
+            'paddle_product_id' => '2047',
             'slug' => Str::of('Laravel For Beginners')->slug(),
             'title' => 'Laravel For Beginners',
             'tagline' => 'Learn Laravel from scratch',
@@ -33,6 +34,7 @@ class AddGivenCoursesSeeder extends Seeder
         ]);
 
         Course::create([
+            'paddle_product_id' => '2048',
             'slug' => Str::of('Advanced Laravel')->slug(),
             'title' => 'Advanced Laravel',
             'tagline' => 'Level 2 Learn Laravel from scratch',
@@ -47,6 +49,7 @@ class AddGivenCoursesSeeder extends Seeder
         ]);
 
         Course::create([
+            'paddle_product_id' => '2049',
             'slug' => Str::of('Laravel For Expert')->slug(),
             'title' => 'Laravel For Expert',
             'tagline' => 'Level 3 Learn Laravel from scratch',
